@@ -2,8 +2,6 @@
 """
 Module that contains the BaseModel class
 """
-
-
 import models
 import uuid
 import sqlalchemy
@@ -14,10 +12,12 @@ from sqlalchemy.ext.declarative import declarative_base
 
 time = "%Y-%m-%dT%H:%S.%f"
 
+
 if models.storage_t == "db":
     Base = declarative_base()
 else:
     Base = object
+
 
 class BaseModel:
     """"The Basemodel class from which other classes are derived"""

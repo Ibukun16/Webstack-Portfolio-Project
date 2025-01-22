@@ -8,7 +8,7 @@ from models.property import Property_Type
 from models.review import Review
 from models.state import State
 from models.user import User
-from models import storage
+from models import storage_t
 from api.v1.views import app_views
 from flask import jsonify
 
@@ -27,6 +27,6 @@ def number_objects():
 
     num_objs = {}
     for i in range(len(classes)):
-        num_objs[names[i]] = storage.count(classes[i])
+        num_objs[names[i]] = storage_t.count(classes[i])
 
     return jsonify(num_objs)

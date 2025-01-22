@@ -68,7 +68,7 @@ class ECSTASYCommand(cmd.Cmd):
         if len(args) == 0:
             print("** class name missing **")
             return False
-        if args[0] in classes:
+        if args[0] in model_classes:
             new_dict = self._key_value_parser(args[1:])
             instance = model_classes[args[0]](**new_dict)
         else:
